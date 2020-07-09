@@ -1,4 +1,4 @@
-# cp_practice
+# Loaders using Custom Painter
 
 A new Flutter project.
 
