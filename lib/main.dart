@@ -29,7 +29,6 @@ class _LoaderState extends State<Loader> with SingleTickerProviderStateMixin{
   Animation _animation;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _controller = AnimationController(vsync: this,duration: Duration(seconds: 1));
     _animation = Tween(begin: 1.0,end: 1.2).animate(CurvedAnimation(parent: _controller, curve: Curves.easeIn));
@@ -59,6 +58,12 @@ class _LoaderState extends State<Loader> with SingleTickerProviderStateMixin{
       );
       })
     );
+  }
+  
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 }
 
